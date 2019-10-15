@@ -1,0 +1,27 @@
+{
+  "title": "Change left cmd key to right_cmd + right_ctr + right_shift + space  (personal)",
+  "rules": [
+    {
+      "description": "Change left cmd to right_cmd + right_ctr + right_shift + space if pressed alone",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command"
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "spacebar",
+              "modifiers": ["right_command", "right_control", "right_shift"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
